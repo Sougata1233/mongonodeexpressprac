@@ -21,9 +21,11 @@ router.use(function(req,res,next){
 })
 
 var user_router = require('../rest_with_mongo_node_prac/routers/user.router')
+var product_router = require('../rest_with_mongo_node_prac/routers/product.router')
 
 app.use(cors())
 app.use('/user', user_router)
+app.use('/product', product_router)
 
 app.listen(port)
 console.log('listening on '+port)
